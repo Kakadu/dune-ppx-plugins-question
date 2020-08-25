@@ -1,0 +1,19 @@
+(library
+ (name libmain)
+ (public_name libmain)
+ ;(kind ppx_rewriter)
+ (modules libmain))
+
+(library
+ (name libplugin)
+ (public_name libplugin)
+ (modules libplugin)
+ ;(kind ppx_rewriter)
+ (libraries libmain))
+
+(library
+ (name ppxmain)
+ (public_name ppxmain)
+ (modules ppxmain)
+ (kind ppx_rewriter)
+ (libraries ppxlib ppxlib.ast ppxlib.traverse libmain))
