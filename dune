@@ -2,6 +2,5 @@
  (name main)
  (modules main)
  (preprocess
-  (pps ppxmain)
-  ;(pps libmain libplugin ppxmain)
-  ))
+  ;(pps ppxmain)
+  (pps libmain libplugin ppxmain)))
